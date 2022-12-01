@@ -1,6 +1,4 @@
 from aocd.models import Puzzle
-from collections import Counter
-
 
 def part1(input):
     elves = []
@@ -50,6 +48,6 @@ if __name__ == "__main__":
 
 10000"""
     #part1(example.splitlines())
-    #part1(puzzle.input_data.splitlines())
-    part2(example.splitlines())
+    part1(puzzle.input_data.splitlines())
+    #part2(example.splitlines())
     part2(puzzle.input_data.splitlines())
