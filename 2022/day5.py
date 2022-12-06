@@ -1,7 +1,6 @@
 from aocd.models import Puzzle
 import numpy as np
 from collections import defaultdict
-from copy import deepcopy
 
 def part1(input):
     cratesinput, instructioninput = input.split("\n\n")
