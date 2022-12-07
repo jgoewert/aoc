@@ -24,12 +24,12 @@ def parseTree(input):
 
 def part1(input):
     directories = parseTree(input)
-    print ("Part 1: {}".format(sum([d for d in directories.values() if d <= 100_000])))
+    print ("Part 1: {}".format(sum([directory for directory in directories.values() if directory <= 100_000])))
 
 def part2(input):
     directories = parseTree(input)
     free = 70000000 - directories[('/',)]
-    print ("Part 2: {}".format(min([d for d in directories.values() if d + free >= 30000000])))
+    print ("Part 2: {}".format(min([directory for directory in directories.values() if directory + free >= 30000000])))
 
 
 if __name__ == "__main__":
