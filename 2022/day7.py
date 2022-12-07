@@ -16,12 +16,14 @@ def parseTree(input):
                 while path:
                     directories[tuple(path)] += int(filesize)
                     path.pop()
-            case ['$', 'cd', path]:
-                tree.append(path)
             case ['$', 'cd', '..']:
                 tree.pop()
+            case ['$', 'cd', path]:
+                tree.append(path)
     return directories
 
+
+    return directories
 def part1(input):
     directories = parseTree(input)
     print ("Part 1: {}".format(sum([directory for directory in directories.values() if directory <= 100000])))
