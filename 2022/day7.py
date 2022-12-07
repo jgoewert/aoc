@@ -6,20 +6,16 @@ def parseTree(input):
     directories = defaultdict(int)
     for line in input:
         match line.split():
-            case ['$', 'cd', '..']:
-                tree.pop()
-            case ['$', 'cd', p]:
-                tree.append(p)
-            case ['$', 'ls']:
-                pass
-            case ['dir', p]:
-                pass
-            case [s, f]:
-                directories[tuple(tree)] += int(s)
+            case [size, name]:
+                directories[tuple(tree)] += int(size)
                 path = tree[:-1]
                 while path:
-                    directories[tuple(path)] += int(s)
+                    directories[tuple(path)] += int(size)
                     path.pop()
+            case ['$', 'cd', p]:
+                tree.append(p)
+            case ['$', 'cd', '..']:
+                tree.pop()
     return directories
 
 def part1(input):
