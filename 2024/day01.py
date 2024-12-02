@@ -42,6 +42,6 @@ if __name__ == "__main__":
 3   9
 3   3"""
     #part1(example.splitlines())
-    #part1(puzzle.input_data.splitlines())
-    part2(example.splitlines())
+    part1(puzzle.input_data.splitlines())
+    #part2(example.splitlines())
     part2(puzzle.input_data.splitlines())
