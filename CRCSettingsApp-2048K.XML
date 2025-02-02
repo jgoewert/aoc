@@ -1,0 +1,20 @@
+﻿<?xml version="1.0" encoding="utf-8" standalone="yes"?>
+<CRCSettings>
+  <CRC>
+    <Name>AppModule</Name>
+    <IgnoreRangeID>1</IgnoreRangeID>
+    <CRCRangeID>1</CRCRangeID>
+    <CRCAddress>0800806C</CRCAddress>
+    <FillData>FF</FillData>
+  </CRC>
+  <CRCRange>
+    <ID>1</ID>
+    <StartAddress>08008070</StartAddress>
+    <EndAddress>081FFFFF</EndAddress>
+  </CRCRange>
+  <IgnoreRange>
+    <ID>1</ID>
+    <StartAddress>00000000</StartAddress>
+    <EndAddress>000000000</EndAddress>
+  </IgnoreRange>
+</CRCSettings>
