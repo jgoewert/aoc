@@ -24,7 +24,7 @@ jobs:
       with:
         detached: true
     - name: Run Hex
-      run: HR_CRCHex.exe 22532_scm.hex CRCSettingsApp-2048K.XML
+      run: ./HR_CRCHex.exe 22532_scm.hex CRCSettingsApp-2048K.XML
     - uses: actions/upload-artifact@v4
       with:
         name: my-artifact
