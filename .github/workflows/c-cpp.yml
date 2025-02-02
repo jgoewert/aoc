@@ -15,19 +15,14 @@ on:
 jobs:
   build:
 
-    runs-on: ubuntu-22.04
+    runs-on: windows-latest
 
     steps:
     - uses: actions/checkout@v4
-    - name: Setup tmate session
-      uses: mxschmitt/action-tmate@v3
-    - name: Install Wine
-      run: |
-        sudo dpkg --add-architecture i386
-        wget -qO - https://dl.winehq.org/wine-builds/winehq.key | sudo apt-key add -
-        sudo add-apt-repository ppa:cybermax-dexter/sdl2-backport
-        sudo apt-add-repository "deb https://dl.winehq.org/wine-builds/ubuntu $(lsb_release -cs) main"
-        sudo apt install --install-recommends winehq-stable
     - name: Run Hex
       run: wine HR_CRCHex.exe 22532_scm.hex CRCSettingsApp-2048K.XML
+    - uses: actions/upload-artifact@v4
+        with:
+          name: my-artifact
+          path: 22532_scm.hex
 
